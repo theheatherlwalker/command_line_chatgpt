@@ -1,10 +1,15 @@
 import os
+import pickle
 import openai
 from dotenv import load_dotenv
 from colorama import Fore, Back, Style
 
-# load values from the .env file if it exists
-load_dotenv()
+# Open the pickle with our secret_string variable
+import pickle
+
+with open('secret_string.pkl', 'rb') as f:
+    secret_string = pickle.load(f)
+
 
 # configure OpenAI
 openai.api_key = secret_string
